@@ -27,10 +27,40 @@ header > a:hover {
 
 main {
     display: flex;
+    max-width: 90rem;
+    margin: 0 auto;
 }
 
 .content {
+    display: flex;
     flex: 70%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 266px;
+    margin: .7rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article > img {
+    display: block;
+    width: 100%;
+}
+
+article > h1 {
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+article > p {
+    color: #8C8C8C;
+    line-height: 150%;
 }
 
 .sidebar {
