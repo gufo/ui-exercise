@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin-top: 4rem;
 }
@@ -25,6 +29,10 @@ header > a:hover {
     background: #eee;
 }
 
+header > .toggle-sidebar {
+    margin-left: auto;
+}
+
 main {
     display: flex;
     max-width: 90rem;
@@ -33,9 +41,10 @@ main {
 
 .content {
     display: flex;
-    flex: 70%;
+    width: 70%;
     flex-wrap: wrap;
     justify-content: center;
+    transition: width 0.3s ease-in-out;
 }
 
 article {
@@ -64,5 +73,18 @@ article > p {
 }
 
 .sidebar {
-    flex: 30%;
+    width: 30%;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-out 0.2s;
+}
+
+.sidebar-hidden .content {
+    width: 100%;
+    transition: width 0.3s ease-in-out 0.1s;
+}
+
+.sidebar-hidden .sidebar {
+    width: 0%;
+    opacity: 0;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out 0.1s, opacity 0.3s ease-out;
 }
